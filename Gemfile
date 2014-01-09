@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
+
 gem 'rails', '4.0.0'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
@@ -14,6 +15,8 @@ gem 'haml-rails'
 gem 'high_voltage'
 gem 'simple_form'
 gem 'thin'
+gem 'aws-sdk'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
@@ -26,4 +29,14 @@ group :development do
   gem 'rb-fchange', :require=>false
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
+
+  gem 'rspec-given'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'terminal-notifier-guard'
+  gem 'simplecov'
+  gem 'coveralls'
+
+  gem 'pry'
 end
