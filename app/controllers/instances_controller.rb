@@ -1,8 +1,8 @@
 class InstancesController < ApplicationController
+  include InstancesHelper
 
   def index
-    @instances = AWS.ec2.instances
-    binding.pry
+    @instances = retrieve_instances
     respond_to do |format|
       format.html
       format.json { render json: @instances }
